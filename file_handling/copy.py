@@ -1,0 +1,7 @@
+f1 = open("file_handling/ayush_result.txt", "r")
+f2 = open("file_handling/copy file.txt", "w")
+data = f1.read()
+f2.write(data)
+f1.close()
+f2.close()
+print("file copy successfully")

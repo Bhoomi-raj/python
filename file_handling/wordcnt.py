@@ -1,0 +1,5 @@
+f = open("file_handling/ayush_result.txt", "r")
+data = f.read()
+words = data.split()
+print("number of word ",len(words))
+f.close()

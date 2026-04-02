@@ -1,0 +1,3 @@
+hello bhai i am using your result txt file
+for my file handling in python
+i hope you are not having any prblm 
