@@ -1,14 +1,21 @@
-a = int(input("enter vale of a "))
-b = int(input("enter value of b "))
-choice = input("enter operator ")
-match choice :
-    case "+" : print("addition ",a+b)
-    case "-" : print("subtraction ",a-b)
-    case "*" : print("multiplication ",a*b)
-    case "/" : 
-        if(b!=0) :
-            print("division ",a/b)
-        else :
-            print("canot divide by zero")
-    case _:
-        print("enter valid operator")
+def add(*args):
+    return sum(args)
+def sub(*args):
+    res = args[0]
+    for i in args[1:]:
+        res-=i
+    return res
+    
+def multiplication(*args):
+    res = args[0]
+    for i in args[1:]:
+        res = res*i
+    return res
+numbers = list(map(int,input("enter numbers ").split()))    
+op = input("enter operation ")
+if op=='+':
+    print("additon ",add(*numbers))
+elif op=='-':
+    print("subtraction ",sub(*numbers))
+elif op=='*':
+    print("multiplication ",multiplication(*numbers))

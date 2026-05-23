@@ -1,15 +1,17 @@
-def rep(s,a,b):
-    new_str = ""
-    for i in range(len(s)):
-        if s[i]==a:
-            new_str+=b
-        else:
-            new_str+=s[i]
-    return new_str            
+file_name = "ayush_result.txt"
+with open(file_name,'w') as df:
+    name = "ayush"
+    roll = 5
+    df.write(f"{name},{roll}")
+    print("data is added successfully ")
 
+with open(file_name,'r') as df:
+    data = df.read()
+    word = data.split()
+    print(word)
 
-s = input("enter string ")
-a = input("enter char replace ")
-b = input("enter char to replace with ")
-print("original string ",s)
-print("replaced string ",rep(s,a,b))            
+with open(file_name,"r") as f:
+    content = f.readlines()
+    content = [ line.replace("ayush","bhoomi") for line in content]
+with open(file_name,"w") as f:
+    f.writelines(content)    

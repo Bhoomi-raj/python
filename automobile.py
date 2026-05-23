@@ -1,23 +1,17 @@
-# Step 1: Create a SET of car components
-components = {"Engine", "Battery", "Brake", "Radiator"}
-
-print("All Components:", components)
-
-
-# Step 2: Create a DICTIONARY to store status
-status = {
-    "Engine": "Working",
-    "Battery": "Working",
-    "Brake": "Not Working",
-    "Radiator": " Working"
+components = {
+    "brake,lights,engine,horn,mirror"
 }
+print("components ",components)
 
-print("\nComponent Status:")
-for part in status:
-    print(part, ":", status[part])
-
-
-# Step 3: Check if any component is not working
-for part in status:
-    if status[part] == "Not Working":
-        print("\n⚠ Problem found in:", part)
+status = {
+    "brake" : "working"
+    ,"lights" : "working"
+    ,"engine" : "not working"
+    ,"horn" : "working"
+    ,"mirror" : "working"
+}
+for parts in status:
+    print(parts , "is ", status[parts])
+for parts in status:
+    if(status[parts]=="not working"):
+        print("damaged part ",parts)    
