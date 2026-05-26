@@ -1,14 +1,12 @@
-def maxele(l1):
-    ans = l1[0]  
-    for i in range(len(l1)):
-        t = l1[i]
-        ans = max(ans,t)
-    return ans
-
 l1 = []
-x = int(input("enter size of list "))
+x = int(input("enter len of list "))
 for i in range(x):
-    a = int(input("enter value "))
+    a = int(input("enter ele "))
     l1.append(a)
-maxele(l1)
-print("max element in l1 is  ",maxele(l1))    
+print("list ",l1) 
+maxi = l1[0]
+for i in l1:
+    if i > maxi:
+        maxi = i
+
+print("maximum ele ",maxi)           
